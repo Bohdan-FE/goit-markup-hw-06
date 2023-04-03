@@ -6,6 +6,7 @@
   --white-color: #ffffff;
   --prassed-state-color: #404bbf;
   --accent-color: #e7e9fc;
+  --label-color: #8e8f99;
 }
 
 h1,
@@ -565,8 +566,6 @@ header {
 }
 
 .socialmedia-container {
-  width: 208px;
-  margin-right: 80px;
 }
 
 .socialmedia-list {
@@ -597,7 +596,7 @@ header {
 }
 
 .subscribe-container {
-  width: 453px;
+ margin-left: auto;
 }
 
 .subscribe-form {
@@ -679,12 +678,14 @@ header {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   width: 408px;
-  min-height: 584px;
+  /* min-height: 584px; */
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 24px 24px;
+  background-color: var(--white-color);
 }
 
 .backdrop.is-hidden .modal {
@@ -727,10 +728,8 @@ header {
 }
 
 .modal-container {
-  position: absolute;
   top: 72px;
   left: 24px;
-  width: 360px;
 }
 
 .modal-heading {
@@ -746,20 +745,19 @@ header {
 .modal-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .modal-container input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  width: 360px;
+  width: 100%;
   height: 40px;
   padding-left: 38px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-container input:focus {
-  border: 1px solid var(--primary-brand-color);
+  border-color: var(--primary-brand-color);
   outline: none;
 }
 
@@ -772,12 +770,14 @@ header {
 }
 
 .modal-container label {
-  align-self: flex-start;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  color: #8e8f99;
+  color: var(--label-color);
+  margin-bottom: 8px;
+  width: 100%;
+  
 }
 
 label[for='comment'] {
@@ -787,7 +787,6 @@ label[for='comment'] {
 .input-container {
   position: relative;
   margin-top: 4px;
-  margin-bottom: 8px;
 }
 
 .label-icon {
@@ -839,6 +838,7 @@ label[for='comment'] {
   letter-spacing: 0.04em;
   color: var(--white-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0 auto;
 }
 
 .send-btn:focus,
@@ -846,10 +846,10 @@ label[for='comment'] {
   background-color: var(--prassed-state-color);
 }
 
-.check-text {
+.modal-container .check-text {
   display: flex;
   align-items: baseline;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .check-text span {
@@ -871,4 +871,7 @@ label[for='comment'] {
   background-color: var(--prassed-state-color);
   border: 1px solid var(--prassed-state-color);
   fill: var(--white-color);
+}
+.privacy-policy {
+  color: var(--primary-brand-color)
 }
